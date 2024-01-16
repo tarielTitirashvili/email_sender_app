@@ -5,7 +5,7 @@ const { mailOptions, transporter } = require("./assets/emailConfig")
 const app = express()
 
 setTimeout(() => {
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions(), (error, info) => {
     if (error) {
       return console.error(error);
     }
